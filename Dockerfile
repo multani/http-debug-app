@@ -1,8 +1,6 @@
-FROM python:3.6-slim
+FROM python:3.7-alpine
 
-RUN pip install --no-cache-dir --upgrade pipenv
+RUN pip install --no-cache-dir --upgrade bottle==0.12.13
 WORKDIR /src
-ADD Pipfile* /src/
-RUN pipenv --python /usr/local/bin/python install --system
 ADD . /src
 ENTRYPOINT ["/src/app.py"]
