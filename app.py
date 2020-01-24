@@ -8,6 +8,18 @@ from bottle import route, run, template, request
 def index():
     return '<b>hit /debug/</b>'
 
+
+@route('/sum/<a:int>/<b:int>')
+def sum_endpoint(a, b):
+    return {"res": a + b}
+
+@route('/json/debug/<path:re:.*>')
+def json_debug(path):
+    return {
+        "url": request.url,
+        "headers": [{k: v} for (k, v) in sorted(request.headers.items())],
+    }
+
 @route('/debug/<path:re:.+>')
 def debug(path):
     headers = "\n".join("{}: {}".format(k, v) for (k, v) in sorted(request.headers.items()))

@@ -1,6 +1,10 @@
-FROM python:3.7-alpine
+FROM python:3.7-slim
 
-RUN pip install --no-cache-dir --upgrade bottle==0.12.13
+ENV PYTHONUNBUFFERED=1
+RUN pip install --no-cache-dir --upgrade poetry==1.0.2
 WORKDIR /src
+ADD poetry.lock pyproject.toml /src/
+RUN poetry install
+
 ADD . /src
-ENTRYPOINT ["/src/app.py"]
+ENTRYPOINT ["poetry", "run", "/src/app.py"]
