@@ -20,7 +20,7 @@ def json_debug(path):
         "headers": [{k: v} for (k, v) in sorted(request.headers.items())],
     }
 
-@route('/debug/<path:re:.+>')
+@route('/debug/<path:re:.*>')
 def debug(path):
     headers = "\n".join("{}: {}".format(k, v) for (k, v) in sorted(request.headers.items()))
     return template("""<html>
