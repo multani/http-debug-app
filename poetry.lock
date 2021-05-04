@@ -1,17 +1,18 @@
 [[package]]
-category = "main"
-description = "Fast and simple WSGI-framework for small web-applications."
 name = "bottle"
+version = "0.12.19"
+description = "Fast and simple WSGI-framework for small web-applications."
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.12.18"
 
 [metadata]
-content-hash = "eafab4247e63aee5032cdf76375e3b75ab0e6ea97f98eb8a46881dc211cf035d"
+lock-version = "1.1"
 python-versions = "^3.7"
+content-hash = "eafab4247e63aee5032cdf76375e3b75ab0e6ea97f98eb8a46881dc211cf035d"
 
 [metadata.files]
 bottle = [
-    {file = "bottle-0.12.18-py3-none-any.whl", hash = "sha256:43157254e88f32c6be16f8d9eb1f1d1472396a4e174ebd2bf62544854ecf37e7"},
-    {file = "bottle-0.12.18.tar.gz", hash = "sha256:0819b74b145a7def225c0e83b16a4d5711fde751cd92bae467a69efce720f69e"},
+    {file = "bottle-0.12.19-py3-none-any.whl", hash = "sha256:f6b8a34fe9aa406f9813c02990db72ca69ce6a158b5b156d2c41f345016a723d"},
+    {file = "bottle-0.12.19.tar.gz", hash = "sha256:a9d73ffcbc6a1345ca2d7949638db46349f5b2b77dac65d6494d45c23628da2c"},
 ]
