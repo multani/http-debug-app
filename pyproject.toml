@@ -6,7 +6,7 @@ authors = ["Jonathan Ballet <jon@multani.info>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-bottle = "^0.12.18"
+bottle = "^0.12.20"
 
 [tool.poetry.dev-dependencies]
 
